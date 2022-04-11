@@ -1,0 +1,164 @@
+@import '../../../variables';
+
+.services_grid {
+  background: $background-color;
+  display: grid;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  ;
+  height: 100%;
+  grid-auto-rows: 1fr;
+}
+
+.services_section.one {
+  grid-area: one;
+  background: url(../../../assets/img/Background-Website.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.services_section.two {
+  grid-area: two;
+}
+
+.services_section.three {
+  grid-area: three;
+}
+
+.services_one-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.services_icon_background {
+  font-size: 15em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.2;
+  aspect-ratio: 1/1;
+  color: $white-font-color;
+}
+
+.services_indicator-container {
+  padding: 2.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services_indicator {
+  width: 15%;
+  height: .2em;
+  background: $white-font-color;
+  transition-duration: $animation-speed;
+  border-radius: 50px;
+}
+
+.services_indicator.active {
+  width: 30%;
+  height: .2em;
+  background: $accent-color;
+  transition-duration: $animation-speed;
+}
+
+.services_content-container {
+  font-size: 0.8em;
+  text-align: left;
+  padding: 0 1.5em;
+}
+
+.services_content-text {
+  margin: 0;
+}
+
+.services_content-text.with-margin {
+  margin: 1em 0;
+}
+
+.services_choose-container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  padding: 2em 1em;
+  gap: 1.3em;
+}
+
+.services_service {
+  background: $gradient;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 1em .5em;
+}
+
+.services_service-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.services_icon-background {
+  background: $gradient;
+  height: 30px;
+  aspect-ratio: 1/1;
+  padding: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $box-shadow;
+  border-radius: .5em;
+  box-sizing: content-box;
+}
+
+.services_icon {
+  font-size: 1.3em;
+}
+
+.services_service-text {
+  font-size: 0.7em;
+}
+
+.services_small-text {
+  font-size: 0.7em;
+}
+
+.services_section.three {
+  font-size: 0.75em;
+}
+
+.to-contact-container {
+  width: 100%;
+  height: min-content;
+  text-align: center;
+  padding: 1em 2em;
+}
+
+.to-contact-button {
+  width: 100%;
+  background: $gradient;
+  position: relative;
+  height: 33px;
+  border-radius: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $box-shadow;
+}
+
+.services_icon-background.contact {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

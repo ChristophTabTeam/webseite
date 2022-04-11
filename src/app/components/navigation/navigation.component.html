@@ -1,0 +1,25 @@
+<nav class="navigation">
+  <ul class="nav_list">
+    <li class="nav_list-item">
+      <img src="../../../assets/img/icon.svg" class="nav_icon" *ngIf="activeSection === 'home'"/>
+      <img src="../../../assets/img/logo-lines.svg" class="nav_icon" *ngIf="activeSection !== 'home'"/>
+      <span class="nav_icon-name" *ngIf="activeSection === 'home'">Home</span>
+    </li>
+    <li class="nav_list-item">
+      <fa-icon [icon]="faLightbulb" class="nav_icon stroke"></fa-icon>
+      <span class="nav_icon-name" *ngIf="activeSection === 'service'">Service</span>
+    </li>
+    <li class="nav_list-item">
+      <fa-icon [icon]="faPeopleGroup" class="nav_icon stroke"></fa-icon>
+      <span class="nav_icon-name" *ngIf="activeSection === 'team'">Team</span>
+    </li>
+    <li class="nav_list-item">
+      <fa-icon [icon]="faPaperPlane" class="nav_icon stroke"></fa-icon>
+      <span class="nav_icon-name" *ngIf="activeSection === 'contact'">Kontakt</span>
+    </li>
+  </ul>
+</nav>
+
+<div class="to-bottom" *ngIf="width >= 900">
+  <fa-icon [icon]="faCircleInfo" class="nav_icon stroke"></fa-icon>
+</div>

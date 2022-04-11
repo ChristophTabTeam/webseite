@@ -1,0 +1,49 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $white-font-color;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.green {
+  color: $accent-color;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+section {
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.services {
+  height: 150vh;
+}
+
+.textContainer {
+  padding: 1em;
+  text-align: left;
+}
+
+.italic {
+  font-style: italic;
+}

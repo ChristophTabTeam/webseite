@@ -1,0 +1,82 @@
+@import '../../../variables';
+
+.logo_container {
+  position: absolute;
+  top: 2em;
+  width: 100%;
+  padding: 0 5em;
+}
+
+.logo {
+  max-width: 100%;
+}
+
+.start_grid {
+  display: grid;
+  font-size: 0.75em;
+  height: 100%;
+  background: url(../../../assets/img/Background-Website.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.socials_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  position: relative;
+  &::after {
+    background: $accent-color;
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    content: '';
+    right: 0;
+    top: 0;
+    border-radius: 50px;
+  }
+}
+
+.socials_icon-wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials_icon {
+  color: $white-font-color;
+  stroke: $white-font-color;
+  stroke-width: 1rem;
+  width: 30px;
+  aspect-ratio: 1/1;
+  fill-opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  transition-duration: $animation-speed;
+  &:hover {
+    stroke: 0;
+    fill-opacity: 1;
+  }
+}

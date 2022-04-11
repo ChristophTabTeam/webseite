@@ -1,0 +1,23 @@
+@import '../../../variables';
+
+.footer {
+  height: 170vh;
+}
+
+.footer_grid {
+  display: grid;
+  grid-template-areas:
+  'one'
+  'two'
+  'two'
+  ;
+  grid-auto-rows: 1fr;
+}
+
+.footer_section.one {
+  grid-area: one;
+}
+
+.footer_section.two {
+  grid-area: two;
+}
