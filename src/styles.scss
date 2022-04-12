@@ -39,11 +39,56 @@ section {
   height: 150vh;
 }
 
+.contact {
+  height: 150vh;
+}
+
 .textContainer {
   padding: 1em;
   text-align: left;
+  max-width: 300px;
 }
 
 .italic {
   font-style: italic;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+@media (min-width: 370px) {
+  .textContainer {
+    max-width: 350px;
+  }
+
+  main, .footer {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 900px) {
+  .services {
+    height: 100vh;
+  }
+
+  .textContainer {
+    max-width: 500px;
+  }
 }

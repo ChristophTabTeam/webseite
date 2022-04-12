@@ -1,6 +1,97 @@
 <footer class="footer">
   <div class="footer_grid">
-    <div class="footer_section one"></div>
-    <div class="footer_section two"></div>
+    <div class="footer_section one">
+      <div class="footer_text-wrapper">
+        <div class="textContainer" *ngIf="activeContent === 'agb'">
+          <h1><span class="green">Einkaufen</span> mit</h1>
+          <h2>klaren <span class="green">Absichten</span>.</h2>
+          <p>Alles für dich auf einen Blick eingerichtet. Bei Fragen kannst du immer auf uns zukommen.</p>
+          <p>TabTeam informiert <span class='green uppercase'>ehrlich</span> und <span class='green uppercase'>klar</span>.</p>
+        </div>
+        <div class='textContainer' *ngIf="activeContent === 'jobs'">
+          <h1><span class='green'>Teamwork</span> läuft nicht</h1>
+          <h2>ohne <span class='green'>Deine Arbeit</span>.</h2>
+          <p>Werde Teil eines Unternehmens mit angenehmen Arbeitskonditionen. Zielstrebige und motivierte Kollegen stützen dich.</p>
+          <p>TabTeam arbeitet als <span class='green uppercase'>Team</span> und <span class='green uppercase'>fair</span>.</p>
+        </div>
+        <div class='textContainer' *ngIf="activeContent === 'media'">
+          <h1><span class='green'>Download</span> ohne </h1>
+          <h2>Spam und <span class='green'>Virus</span>.</h2>
+          <p>Wir geben Dir hier unsere Medien und Statements an die Hand. Genieße den Support für einfaches arbeiten.</p>
+          <p>TabTeam ist <span class='green uppercase'>einfach</span> und <span class='green uppercase'>zuvorkommend</span>.</p>
+        </div>
+        <div class='textContainer' *ngIf="activeContent === 'impressum'">
+          <h1><span class='green'>Haftung</span> auf</h1>
+          <h2>einen <span class='green'>Augenblick</span>.</h2>
+          <p>Unser Impressum ist für Dich direkt ersichtlich und übersichtlich gehalten. Wir bieten Dir hier einen klaren Kontakt.</p>
+          <p>TabTeam ist <span class='green uppercase'>offen</span> und <span class='green uppercase'>transparent</span>.</p>
+        </div>
+        <div class='textContainer' *ngIf="activeContent === 'bewerbung'">
+          <h1><span class='green'>Digital</span> anklingeln</h1>
+          <h2>und <span class='green'>Job finden</span>.</h2>
+          <p>Fühl dich bestärkt und sende uns dein CV. Direkt digital in unser Postfach. Wir freuen uns von Dir zu hören.</p>
+          <p>TabTeam ist <span class='green uppercase'>freundlich</span> und <span class='green uppercase'>motiviert</span>.</p>
+        </div>
+        <div class='textContainer' *ngIf="activeContent === 'datenschutz'">
+          <h1><span class='green'>Rechtlich</span> sicher</h1>
+          <h2>mit <span class='green'>Datenschutz</span>.</h2>
+          <p>Alle unsere Cookie Richtlinien und Geschäftsdaten auf einen Blick. DSGVO ist uns wichtig.</p>
+          <p>TabTeam arbeitet <span class='green'>SCHÜTZEND</span> und <span class='green'>SICHER</span>.</p>
+        </div>
+      </div>
+      <div class="footer_menu-container">
+        <div class="footer_menu-row">
+          <ul class="footer_menu-list">
+            <li [ngClass]="(activeContent === 'agb') ? 'footer_menu-list-item active uppercase' : 'footer_menu-list-item uppercase'" (click)="setContent(contents.agb)">AGB</li>
+            <li [ngClass]="(activeContent === 'jobs') ? 'footer_menu-list-item active uppercase' : 'footer_menu-list-item uppercase'" (click)="setContent(contents.jobs)">Jobs</li>
+            <li [ngClass]="(activeContent === 'media') ? 'footer_menu-list-item active uppercase' : 'footer_menu-list-item uppercase'" (click)="setContent(contents.media)">Media</li>
+            <li [ngClass]="(activeContent === 'bewerbung') ? 'footer_menu-list-item active uppercase' : 'footer_menu-list-item uppercase'" (click)="setContent(contents.bewerbung)">Bewerbung</li>
+            <li [ngClass]="(activeContent === 'impressum') ? 'footer_menu-list-item active uppercase' : 'footer_menu-list-item uppercase'" (click)="setContent(contents.impressum)">Impressum</li>
+            <li [ngClass]="(activeContent === 'datenschutz') ? 'footer_menu-list-item active uppercase' : 'footer_menu-list-item uppercase'" (click)="setContent(contents.datenschutz)">Datenschutz</li>
+          </ul>
+        </div>
+        <div class="footer_menu-row">
+          <ul class='footer_menu-list'>
+            <li class='footer_menu-list-item'>
+                <span class='footer__list-item-name'>Geltungsbereich</span>
+            </li>
+            <li class='footer_menu-list-item'>
+                <span class='footer__list-item-name'>Vertragspartner</span>
+            </li>
+            <li class='footer_menu-list-item'>
+                <span class='footer__list-item-name'>Vertragsschluss</span>
+            </li>
+            <li class='footer_menu-list-item'>
+                <span class='footer__list-item-name'>Widerrufsrecht</span>
+            </li>
+            <li class='footer_menu-list-item'>
+                <span class='footer__list-item-name'>Preise und Versandkosten</span>
+            </li>
+            <li class='footer_menu-list-item'>
+                <span class='footer__list-item-name'>Lieferung</span>
+            </li>
+            <li class='footer_menu-list-item'>
+                <span class='footer__list-item-name'>Zahlung</span>
+            </li>
+            <li class='footer_menu-list-item'>
+                <span class='footer__list-item-name'>Eigentumsvorbehalt</span>
+            </li>
+            <li class='footer_menu-list-item'>
+                <span class='footer__list-item-name'>Streitbeteiligung</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer_section two">
+      <div class="footer_content-container">
+        <app-agb *ngIf="activeContent === 'agb'"></app-agb>
+        <app-jobs *ngIf="activeContent === 'jobs'"></app-jobs>
+        <app-media *ngIf="activeContent === 'media'"></app-media>
+        <app-bewerbung *ngIf="activeContent === 'bewerbung'"></app-bewerbung>
+        <app-impressum *ngIf="activeContent === 'impressum'"></app-impressum>
+        <app-datenschutz *ngIf="activeContent === 'datenschutz'"></app-datenschutz>
+      </div>
+    </div>
   </div>
 </footer>

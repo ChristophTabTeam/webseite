@@ -1,0 +1,54 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="applicationForm" #applyForm class="footer_form">
+  <div class="footer_form-first-grid">
+    <label class="footer_input-label one">
+      <input type="text" formControlName="firstName" class="footer_input" placeholder="Vorname">
+    </label>
+    <label class="footer_input-label two">
+      <input type="text" formControlName="lastName" class="footer_input" placeholder="Nachname">
+    </label>
+    <label class="footer_input-label three">
+      <input type="text" formControlName="phone" class="footer_input" placeholder="Telefon">
+    </label>
+    <label class="footer_input-label four">
+      <input type="text" formControlName="email" class="footer_input" placeholder="E-Mail">
+    </label>
+    <select formControlName="job" class="footer_select five">
+      <option value="initiativ">
+        Initiativbewerbung
+      </option>
+      <option *ngFor="let job of jobs" [value]="job.id">
+        {{job.title}}
+      </option>
+    </select>
+  </div>
+  <div class="footer_form-files-container">
+    <label class='footer_input-label footer_app-file one' for='cv'>
+      <div class='footer_app-file-name'>
+        <span class='footer_app-input-name'>Anschreiben</span>
+        <input type='file' name='footerCv' class='footer_app-input-file app-cv'/>
+      </div>
+      <span class='footer_app-file-icon'>
+        <fa-icon [icon]="faArrowUpFromBracket" class="footer_apply-icon"></fa-icon>
+      </span>
+    </label>
+    <label class='footer_input-label footer_app-file two' for='cv'>
+      <div class='footer_app-file-name'>
+        <span class='footer_app-input-name'>Lebenslauf</span>
+        <input type='file' title=' ' name='footerLetterOfApplication' class='footer_app-input-file app-letter'/>
+      </div>
+      <span class='footer_app-file-icon'>
+        <fa-icon [icon]="faArrowUpFromBracket" class="footer_apply-icon"></fa-icon>
+      </span>
+    </label>
+    <label class='footer_input-label footer_app-file three' for='cv'>
+      <div class='footer_app-file-name'>
+        <span class='footer_app-input-name'>Weitere Anhänge</span>
+        <input type='file' name='moreFiles' class='footer_app-input-file app-more-files'/>
+      </div>
+      <span class='footer_app-file-icon'>
+        <fa-icon [icon]="faArrowUpFromBracket" class="footer_apply-icon"></fa-icon>
+      </span>
+    </label>
+    <button type="submit" [disabled]="!applicationForm.valid" class="footer_apply-button">Bewerbung abschicken</button>
+  </div>
+</form>

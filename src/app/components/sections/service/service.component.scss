@@ -1,4 +1,4 @@
-@import '../../../variables';
+@import '../../../../variables';
 
 .services_grid {
   background: $background-color;
@@ -14,7 +14,7 @@
 
 .services_section.one {
   grid-area: one;
-  background: url(../../../assets/img/Background-Website.jpg);
+  background: url(../../../../assets/img/Background-Website.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,6 +30,10 @@
 
 .services_section.three {
   grid-area: three;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .services_one-icon {
@@ -42,6 +46,7 @@
 
 .services_icon_background {
   font-size: 15em;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -49,6 +54,7 @@
   opacity: 0.2;
   aspect-ratio: 1/1;
   color: $white-font-color;
+  margin: 0 auto;
 }
 
 .services_indicator-container {
@@ -56,6 +62,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .services_indicator {
@@ -93,6 +102,8 @@
   grid-auto-flow: column;
   padding: 2em 1em;
   gap: 1.3em;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 .services_service {
@@ -124,6 +135,12 @@
 
 .services_icon {
   font-size: 1.3em;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  fill-opacity: 0;
+  stroke: $white-font-color;
+  stroke-width: 1em;
 }
 
 .services_service-text {
@@ -146,7 +163,7 @@
 }
 
 .to-contact-button {
-  width: 100%;
+  width: 80%;
   background: $gradient;
   position: relative;
   height: 33px;
@@ -155,10 +172,43 @@
   align-items: center;
   justify-content: center;
   box-shadow: $box-shadow;
+  margin: 0 auto;
 }
 
 .services_icon-background.contact {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+@media (min-width: 400px) {
+  .services_section.three {
+    font-size: 0.85em;
+  }
+
+  .services_content-container {
+    font-size: .85em;
+    max-width: 370px;
+    margin: 0 auto;
+  }
+
+  .services_service {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 900px) {
+  .services_grid {
+    grid-template-areas:
+    'one three'
+    'one two'
+    ;
+    grid-auto-rows: 50%;
+    grid-auto-columns: 50%;
+  }
+
+  .services_section.three {
+    justify-content: flex-end;
+    gap: 2em;
+  }
 }

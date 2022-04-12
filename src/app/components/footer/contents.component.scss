@@ -1,0 +1,132 @@
+@import '../../../variables';
+// Application
+
+.footer_form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.footer_form-first-grid {
+  display: grid;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  'four'
+  'five'
+  ;
+  gap: 1.5em;
+}
+
+.footer_form-files-container {
+  display: grid;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  ;
+  gap: 1.5em;
+  padding-top: 1.5em;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.footer_input-label {
+  width: 100%;
+  box-shadow: $box-shadow;
+  border-radius: 500px;
+}
+
+.footer_select {
+  box-shadow: $box-shadow;
+}
+
+.footer_input,
+.footer_select {
+  width: 100%;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 500px;
+  background: $white-font-color;
+}
+
+.footer_input:focus,
+.footer_select:focus {
+  appearance: none;
+}
+
+.footer_app-input-file {
+  font-size: 0.6em;
+  position: relative;
+  box-sizing: border-box;
+  width: 130px;
+}
+
+.footer_app-file-name {
+  display: grid;
+
+}
+
+.footer_app-input-file::-webkit-file-upload-button {
+  display: none;
+}
+
+.footer_app-file {
+  display: flex;
+  color: black;
+  background: $white-font-color;
+  justify-content: space-between;
+  border-radius: 500px;
+}
+
+.footer_app-file-name {
+  background: $white-font-color;
+  padding: 0.5em 0 0.5em 1em;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 500px 0 0 500px;
+}
+
+.footer_app-file-icon {
+  background: linear-gradient(to right, hsl(140, 32%, 40%), hsl(142, 20%, 34%));
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  color: $white-font-color;
+}
+
+.file-icon {
+  color: $white-font-color;
+  height: 100%;
+}
+
+.footer_apply-button {
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 500px;
+  background: $gradient;
+  border: none;
+  box-shadow: $box-shadow;
+}
+
+@media (min-width: 370px) {
+  .footer_form-first-grid {
+    grid-template-areas:
+    'one two'
+    'three four'
+    'five five'
+    ;
+    font-size: 1.4em;
+  }
+}

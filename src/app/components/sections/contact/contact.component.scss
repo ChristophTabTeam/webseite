@@ -1,0 +1,242 @@
+@import '../../../../variables';
+
+.contact_grid {
+  display: grid;
+  grid-template-areas:
+  'one'
+  'two'
+  'two'
+  ;
+  grid-auto-rows: 1fr;
+  height: 100%;
+  background: $background-color;
+  font-size: 0.75em;
+}
+
+.contact_section.one {
+  background: url(../../../../assets/img/Background-Website_Blur.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_section.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__iphone {
+  height: 79%;
+  border: 1.1em solid #333333;
+  aspect-ratio: 9/19.5;
+  border-radius: 2.5em;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 50px rgba(26, 26, 26,0.8);
+  z-index: 1;
+  max-height: 600px;
+}
+
+.contact__iphone-background {
+  height: 100%;
+  width: 100%;
+  background: url(../../../../assets/img/Background-Website.jpg);
+  background-size: 1000%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  border-radius: 1.7em;
+  box-shadow: $box-shadow;
+}
+
+.contact__form-wrapper {
+  width: 100%;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3em 0.6em 0.6em;
+  position: relative;
+  align-items: center;
+  backdrop-filter: grayscale(40%);
+}
+
+.contact__iphone-notch {
+  position: absolute;
+  background: #333333;
+  height: 1.4em;
+  width: 8em;
+  top: -3px;
+  border-radius: 0 0 3em 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.contact__iphone-notch-sensor {
+  height: 0.3em;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.contact__iphone-notch-speaker {
+  height: 0.2em;
+  width: 2em;
+  background-color: black;
+  border-radius: 5em;
+}
+
+.contact__iphone-notch-camera {
+  height: 0.5em;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.contact__form-input-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contact__form-input-icon {
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  background: $gradient;
+  border-radius: 0.7em 0.3em;
+  height: 100%;
+  aspect-ratio: 1.1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white-font-color;
+  padding: 0.4em;
+  box-shadow: 0 0 10px #333333;
+}
+
+.contact__form-item {
+  width: 100%;
+  padding: 1em;
+  font-size: 1em;
+}
+
+.contact__input {
+  border-radius: 20px;
+  height: 2.5em;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+  width: 100%;
+}
+
+.contact__textarea {
+  width: 100%;
+  aspect-ratio: 1/1.1;
+  border-radius: 1em;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  appearance: none;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+.contact__textarea::placeholder {
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact__submit-button {
+  position: absolute;
+  box-sizing: border-box;
+  padding: .7em;
+  border: none;
+  background: $gradient;
+  color: $white-font-color;
+  border-radius: 1em 0.5em;
+  width: 26%;
+  bottom: -2em;
+  box-shadow: $box-shadow;
+  aspect-ratio: 1/1;
+}
+
+.contact_icon {
+  font-size: 1.3em;
+  fill-opacity: 0;
+  stroke: $white-font-color;
+  stroke-width: 2em;
+}
+
+.contact__iphone-buttons {
+  position: absolute;
+  width: 114.5%;
+  height: 250px;
+  top: 50px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.contact__iphone-left-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact__iphone-right-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 1.5em 0;
+}
+
+.contact__iphone-mute-button {
+  height: 40px;
+  width: 6px;
+  background: #333333;
+  border-radius: 4px 0 0 4px;
+}
+
+.contact__iphone-volume-button {
+  height: 75px;
+  background: #333333;
+  width: 6px;
+  border-radius: 4px 0 0 4px;
+}
+
+.contact__iphone-on-button {
+  height: 100px;
+  background: #333333;
+  width: 6px;
+  border-radius: 0 4px 4px 0;
+}
+
+.contact_submit-icon {
+  font-size: 1.6em;
+  fill-opacity: 0;
+  stroke: $white-font-color;
+  stroke-width: 2em;
+}
+
+@media (min-width: 400px) {
+  .contact_grid {
+    font-size: .85em;
+  }
+}

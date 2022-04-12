@@ -1,0 +1,52 @@
+<div class="contact_grid">
+  <div class="contact_section one">
+    <div class="textContainer">
+      <h1><span class="green">Dein Papierflieger</span> erreicht</h1>
+      <h2>uns schnell und <span class="green">digital</span>.</h2>
+      <p>
+        Analogien ins digitale Sinnbild vermitteln. Wir freuen uns sehr über deine Nachricht.
+        Schick ihn los und vertrau uns.
+      </p>
+      <p>
+        TabTeam arbeitet <span class='green uppercase'>digital</span> und <span class='green uppercase'>zuvorkommend</span>.
+      </p>
+    </div>
+  </div>
+  <div class="contact_section two">
+    <div class='contact__iphone'>
+      <div class='contact__iphone-background'>
+          <form class="contact_form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <div class='contact__iphone-notch'>
+                  <div class='contact__iphone-notch-sensor'></div>
+                  <div class='contact__iphone-notch-speaker'></div>
+                  <div class='contact__iphone-notch-camera'></div>
+              </div>
+              <label class='contact__form-input-label'>
+                  <input type="text" formControlName="name" placeholder='Name'class='contact__form-item contact__input '/>
+                  <span class='contact__form-input-icon'>
+                    <fa-icon [icon]="faUser" class="contact_icon"></fa-icon>
+                  </span>
+              </label>
+              <label class='contact__form-input-label'>
+                  <input type="email" formControlName="email" placeholder='E-Mail' class='contact__form-item contact__input'/>
+                  <span class='contact__form-input-icon'>
+                    <fa-icon [icon]="faEnvelope" class="contact_icon"></fa-icon>
+                  </span>
+              </label>
+              <label class='contact__form-input-label'>
+                  <input type="text" formControlName="subject" placeholder='Betreff' class='contact__form-item contact__input'/>
+                  <span class='contact__form-input-icon'>
+                    <fa-icon [icon]="faComment" class="contact_icon"></fa-icon>
+                  </span>
+              </label>
+              <label class='contact__form-input-label'>
+                  <textarea formControlName="message" placeholder='Schicke den Papierflieger auf die Reise...' class='contact__form-item contact__textarea'></textarea>
+              </label>
+              <button type='submit' class='contact__submit-button'>
+                <fa-icon [icon]="faPaperPlane" class="contact_submit-icon"></fa-icon>
+              </button>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>

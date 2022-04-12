@@ -1,23 +1,125 @@
 @import '../../../variables';
 
 .footer {
-  height: 170vh;
+  height: 150vh;
+  background: $background-color;
+  font-size: 0.75em;
 }
 
 .footer_grid {
-  display: grid;
-  grid-template-areas:
-  'one'
-  'two'
-  'two'
-  ;
-  grid-auto-rows: 1fr;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .footer_section.one {
   grid-area: one;
+  display: grid;
+  grid-auto-rows: 1fr;
+  box-sizing: border-box;
+  height: 65vh;
 }
 
 .footer_section.two {
   grid-area: two;
+  background: url(../../../assets/img/Background-Website_Blur.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+}
+
+.footer_menu-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0em 3em;
+  max-height: 200px;
+  gap: 2em;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100vw;
+}
+
+.footer_menu-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  overflow-y: auto;
+  height: 100%;
+  max-height: 165px;
+}
+
+.footer_menu-list-item {
+  list-style: none;
+  position: relative;
+  width: min-content;
+  &::before {
+    position: absolute;
+    bottom: -3px;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: $accent-color;
+    border-radius: 50px;
+    transition-duration: $animation-speed;
+  }
+}
+
+.footer_menu-list-item.active {
+  position: relative;
+  width: max-content;
+  &::before {
+    position: absolute;
+    bottom: -3px;
+    content: '';
+    width: 80%;
+    height: 2px;
+    background: $accent-color;
+    border-radius: 50px;
+    transition-duration: $animation-speed;
+  }
+}
+
+.footer_text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+.footer_content-container {
+  padding: 1em;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (min-width: 370px) {
+  .footer {
+    font-size: .9em;
+  }
+
+  .footer_menu-container {
+    max-height: 200px;
+  }
+
+  .footer_menu-list {
+    max-height: 100%;
+  }
+}
+
+@media (min-width: 390px) {
+  .footer {
+    font-size: 1em;
+  }
+
+  .footer_menu-container {
+    max-height: 240px;
+  }
 }

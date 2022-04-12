@@ -1,4 +1,4 @@
-@import '../../../variables';
+@import '../../../../variables';
 
 .logo_container {
   position: absolute;
@@ -8,14 +8,14 @@
 }
 
 .logo {
-  max-width: 100%;
+  max-width: 140px;
 }
 
 .start_grid {
   display: grid;
   font-size: 0.75em;
   height: 100%;
-  background: url(../../../assets/img/Background-Website.jpg);
+  background: url(../../../../assets/img/Background-Website.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -78,5 +78,15 @@
   &:hover {
     stroke: 0;
     fill-opacity: 1;
+  }
+}
+
+@media (min-width: 370px) {
+  .start_grid {
+    font-size: .85em;
+  }
+
+  .socials_icon {
+    font-size: 1.5rem;
   }
 }
