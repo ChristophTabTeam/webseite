@@ -1,1 +1,24 @@
-<p>jobs works!</p>
+<div class="footer__content jobs__content">
+  <div class="job_container">
+    <div *ngIf="activeJob !== 'designer'">
+      <h2 class='footer__job-title'>Mediengestalter (m/w/d)</h2>
+      <p class='footer__job-description'>Du hast bock von überall aus der Welt zu jeder Uhrzeit deine kreative Ader ausleben zu können? Dann bist du bei uns richtig</p>
+    </div>
+    <app-designer *ngIf="activeJob === 'designer'" (setContentApply)="setContentApply()"></app-designer>
+    <button class="open_job-button" (click)="setActiveJob(jobs.designer)">
+      <fa-icon [icon]="faCircleDown" *ngIf="activeJob !== 'designer'"></fa-icon>
+      <fa-icon [icon]="faCircleUp" *ngIf="activeJob === 'designer'"></fa-icon>
+    </button>
+  </div>
+  <div class="job_container">
+    <div *ngIf="activeJob !== 'frontenddev'">
+      <h2 class='footer__job-title'>Front End Developer (m/w/d)</h2>
+      <p class='footer__job-description'>Du hast bock von überall aus der Welt zu jeder Uhrzeit deine kreative Ader ausleben zu können? Dann bist du bei uns richtig</p>
+    </div>
+    <app-frontenddev *ngIf="activeJob === 'frontenddev'"></app-frontenddev>
+    <button class="open_job-button" (click)="setActiveJob(jobs.frontenddev)">
+      <fa-icon [icon]="faCircleDown" *ngIf="activeJob !== 'frontenddev'"></fa-icon>
+      <fa-icon [icon]="faCircleUp" *ngIf="activeJob === 'frontenddev'"></fa-icon>
+    </button>
+  </div>
+</div>

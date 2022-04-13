@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FooterService } from 'src/app/services/footer.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { chapters as privacyChapters } from './datenschutz/chapters';
+import { chapters as jobsChapters } from './jobs/chapters';
+import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,14 @@ import { FooterService } from 'src/app/services/footer.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  @ViewChild('datenschutzRef') datenschutzRef: DatenschutzComponent
+
+  privacyChapters = privacyChapters
+  jobsChapters = jobsChapters
   width: number
   height: number
-  activeContent: string = 'bewerbung'
+  activeContent: string = 'jobs'
+  year: number = new Date().getFullYear()
   contents = {
     agb: 'agb',
     jobs: 'jobs',
@@ -18,7 +25,6 @@ export class FooterComponent implements OnInit {
     impressum: 'impressum',
     datenschutz: 'datenschutz'
   }
-  year: number = new Date().getFullYear()
 
   constructor() { }
 
@@ -29,5 +35,9 @@ export class FooterComponent implements OnInit {
 
   setContent(content: string) {
     this.activeContent = content
+  }
+
+  setContentToApply() {
+    this.activeContent = 'bewerbung'
   }
 }

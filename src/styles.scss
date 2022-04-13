@@ -19,6 +19,11 @@ body {
   text-transform: uppercase;
 }
 
+a {
+  color: $accent-color;
+  text-decoration: none;
+}
+
 h1 {
   font-size: 1.5em;
   margin: 0;
@@ -73,6 +78,15 @@ section {
   grid-area: five;
 }
 
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
 @media (min-width: 370px) {
   .textContainer {
     max-width: 350px;
@@ -83,12 +97,36 @@ section {
   }
 }
 
+@media (min-width: 768px) {
+  .textContainer {
+    max-width: 450px;
+  }
+
+  .contact {
+    height: 100vh;
+  }
+}
+
 @media (min-width: 900px) {
   .services {
     height: 100vh;
   }
 
+  .contact {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1350px) {
   .textContainer {
-    max-width: 500px;
+    max-width: 600px;
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1900px) {
+  .textContainer {
+    max-width: 750px;
+    font-size: 1.8rem;
   }
 }

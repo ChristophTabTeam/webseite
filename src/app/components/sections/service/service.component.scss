@@ -4,9 +4,8 @@
   background: $background-color;
   display: grid;
   grid-template-areas:
-  'one'
-  'two'
   'three'
+  'one'
   ;
   height: 100%;
   grid-auto-rows: 1fr;
@@ -14,7 +13,7 @@
 
 .services_section.one {
   grid-area: one;
-  background: url(../../../../assets/img/Background-Website.jpg);
+  background: url(../../../../assets/img/Background-Website_Blur.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,18 +81,30 @@
   transition-duration: $animation-speed;
 }
 
+.content-grid {
+  display: grid;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  ;
+  font-size: 0.9em;
+  gap: 1em;
+  padding: 1em;
+}
+
 .services_content-container {
-  font-size: 0.8em;
+  font-size: 0.85rem;
   text-align: left;
-  padding: 0 1.5em;
+  padding: 1em;
+  border: 1.3pt $white-font-color solid;
+  border-radius: 7px;
 }
 
 .services_content-text {
   margin: 0;
-}
-
-.services_content-text.with-margin {
-  margin: 1em 0;
+  text-align: justify;
+  line-height: 1.5em;
 }
 
 .services_choose-container {
@@ -163,7 +174,7 @@
 }
 
 .to-contact-button {
-  width: 80%;
+  width: 90%;
   background: $gradient;
   position: relative;
   height: 33px;
@@ -181,13 +192,13 @@
   top: 0;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 390px) {
   .services_section.three {
     font-size: 0.85em;
   }
 
   .services_content-container {
-    font-size: .85em;
+    font-size: .78em;
     max-width: 370px;
     margin: 0 auto;
   }
@@ -195,6 +206,21 @@
   .services_service {
     font-size: 1.1em;
   }
+
+  .to-contact-container {
+    font-size: 0.7em;
+  }
+}
+
+@media (min-width: 600px) {
+  .services_content-container {
+    max-width: 450px;
+  }
+
+  .services_section.three {
+    font-size: 1em;
+  }
+
 }
 
 @media (min-width: 900px) {
@@ -209,6 +235,40 @@
 
   .services_section.three {
     justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1350px) {
+  .services_content-container {
+    max-width: 550px;
+    font-size: 1.5rem;
+  }
+
+  .services_choose-container {
+    max-width: 600px;
+    font-size: 1.4em;
+  }
+
+  .services_icon_background {
+    font-size: 30em;
+  }
+}
+
+@media (min-width: 1920px) {
+  .to-contact-button {
+    padding: 1.3em;
+  }
+
+  .services_icon-background {
+    height: 91%;
+  }
+
+  .content-grid {
+    padding: 3em 1em 1em 1em;
     gap: 2em;
+  }
+
+  .services_content-container {
+    max-width: 100%;
   }
 }

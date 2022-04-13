@@ -5,5 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class FooterService {
 
+  applyToJob: string
+
   constructor() { }
+
+  setApplyJob(elem: string) {
+    this.applyToJob = elem
+  }
 }

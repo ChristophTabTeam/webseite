@@ -1,9 +1,15 @@
-<app-navigation></app-navigation>
+<app-navigation
+  [start]="start"
+  [service]="service"
+  [team]="team"
+  [contact]="contact"
+  [footer]="footer"
+></app-navigation>
 <main>
   <section class="start" #start>
     <app-start></app-start>
   </section>
-  <section class="services" #services>
+  <section class="services" #service>
     <app-service></app-service>
   </section>
   <section class="team" #team>
@@ -13,4 +19,7 @@
     <app-contact></app-contact>
   </section>
 </main>
-<app-footer></app-footer>
+<footer #footer>
+  <app-footer></app-footer>
+</footer>
+<app-copyright></app-copyright>

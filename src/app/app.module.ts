@@ -16,6 +16,9 @@ import { BewerbungComponent } from './components/footer/bewerbung/bewerbung.comp
 import { ImpressumComponent } from './components/footer/impressum/impressum.component';
 import { DatenschutzComponent } from './components/footer/datenschutz/datenschutz.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FrontenddevComponent } from './components/footer/jobs/frontenddev/frontenddev.component';
+import { DesignerComponent } from './components/footer/jobs/designer/designer.component';
+import { CopyrightComponent } from './components/copyright/copyright.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MediaComponent,
     BewerbungComponent,
     ImpressumComponent,
-    DatenschutzComponent
+    DatenschutzComponent,
+    FrontenddevComponent,
+    DesignerComponent,
+    CopyrightComponent
   ],
   imports: [
     BrowserModule,

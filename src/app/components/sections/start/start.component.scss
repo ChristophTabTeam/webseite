@@ -4,7 +4,7 @@
   position: absolute;
   top: 2em;
   width: 100%;
-  padding: 0 5em;
+  padding: 0 7em;
 }
 
 .logo {
@@ -28,6 +28,14 @@
   align-items: center;
 }
 
+.grid-section.one {
+  justify-content: flex-start;
+}
+
+.grid-section.two {
+  justify-content: flex-end;
+}
+
 .socials_container {
   position: absolute;
   top: 0;
@@ -48,7 +56,7 @@
   &::after {
     background: $accent-color;
     position: absolute;
-    width: 3px;
+    width: 2px;
     height: 100%;
     content: '';
     right: 0;
@@ -81,6 +89,10 @@
   }
 }
 
+.start_monitor {
+  max-width: 80%;
+}
+
 @media (min-width: 370px) {
   .start_grid {
     font-size: .85em;
@@ -88,5 +100,51 @@
 
   .socials_icon {
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .start_grid {
+    font-size: .95em;
+  }
+
+  .socials_icon {
+    font-size: 1.8rem;
+  }
+
+  .socials_container {
+    padding: 1em;
+  }
+
+  .socials_list {
+    padding: 1.5rem 1rem 1.5rem 0;
+    gap: 1.5em;
+  }
+}
+
+@media (min-width: 900px) {
+  .socials_container {
+    height: 100%;
+  }
+
+  .logo_container {
+    top: 3.5em;
+  }
+
+  .logo {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .start_grid {
+    grid-template-areas:
+    'two one'
+    ;
+    grid-auto-columns: 50%;
+  }
+
+  .socials_icon {
+    font-size: 2.1rem;
   }
 }

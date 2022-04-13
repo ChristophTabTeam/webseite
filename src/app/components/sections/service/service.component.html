@@ -1,71 +1,22 @@
 <div class="services_grid">
   <div class="services_section one">
-    <div class="services_one-icon">
-      <fa-icon [icon]="faFireFlameCurved" class="services_icon_background" *ngIf="activeServ === 'branding'"></fa-icon>
-      <fa-icon [icon]="faDisplay" class="services_icon_background" *ngIf="activeServ === 'webdesign'"></fa-icon>
-      <fa-icon [icon]="faHashtag" class="services_icon_background" *ngIf="activeServ === 'socialmedia'"></fa-icon>
-    </div>
-    <div class="services_indicator-container">
-      <div [ngClass]="(activeServ === 'branding') ? 'services_indicator active': 'services_indicator'" (click)="setBrandingActive()"></div>
-      <div [ngClass]="(activeServ === 'webdesign') ? 'services_indicator active': 'services_indicator'" (click)="setWebdesignActive()"></div>
-      <div [ngClass]="(activeServ === 'socialmedia') ? 'services_indicator active': 'services_indicator'" (click)="setSocialMediaActive()"></div>
-    </div>
-    <div class="services_content-container" *ngIf="activeServ === 'branding'">
-      <p class="services_content-text">Wir erschaffen zusammen dein individuelles Brand, deine Corporate Identity und setzen ein Augenmerk auf dein Logo.</p>
-      <p class="services_content-text with-margin">Für deine starke Werbeperfomance geben wir dir persönliche, digitale und Printmedien an die Hand. Als Beispiel Flyer und Visitenkarten.</p>
-      <p class="services_content-text">Deine Marke wird individuell und einzigartig. Deine Motivation zündet zu einer Marketing Flamme die mit uns nicht ausgeht.</p>
-    </div>
-    <div class="services_content-container" *ngIf="activeServ === 'webdesign'">
-      <p class="services_content-text">Dank deinen Vorstellungen personalisieren wir deine Webseite zu einem stilvollen Tab. Sei mit deiner zugeschnittenen Webseite immer ein Volltreffer in den Trends.</p>
-      <p class="services_content-text with-margin">Wir heben deine Userexpierence auf eine neue Ebene. Deine Webseite wirkt einladender für Kundenaktionen. </p>
-      <p class="services_content-text">Die Kundenresonanz wird dich überwältigen, ab jetzt öffnet jeder deinen Tab.</p>
-    </div>
-    <div class="services_content-container" *ngIf="activeServ === 'socialmedia'">
-      <p class="services_content-text">TabTeam wird für dich zum TagTeam. Durch personalisierte Tags setzten wir deinen Kanal ins Rampenlicht.</p>
-      <p class="services_content-text with-margin">Anpassungen führen zu einer genaueren Zielgruppe. Social Media Konzepte machen dein Unternehmen zum Influencer.</p>
-      <p class="services_content-text">Zielgruppenanalyse führt zu einer klar definierten Community. </p>
-    </div>
-  </div>
-  <div class="services_section two">
-    <div class="services_choose-container">
-      <div class="services_service" (mouseenter)="setBrandingActive()">
-        <div class="services_service-icon">
-          <div class="services_icon-background">
-            <fa-icon [icon]="faFireFlameCurved" [ngClass]="(activeServ === 'branding') ? 'services_icon active' : 'services_icon'"></fa-icon>
-          </div>
-        </div>
-        <div class="services_service-text-wrapper">
-          <div class="services_service-text">Branding</div>
-          <div class="services_service-text">4</div>
-        </div>
+    <div class="content-grid">
+      <div class="services_content-container one">
+        <p class="services_content-text">Wir erschaffen zusammen dein individuelles Brand, deine Corporate Identity und setzen ein Augenmerk auf dein Logo.
+        Für deine starke Werbeperfomance geben wir dir persönliche, digitale und Printmedien an die Hand. Als Beispiel Flyer und Visitenkarten.
+        Deine Marke wird individuell und einzigartig. Deine Motivation zündet zu einer Marketing Flamme die mit uns nicht ausgeht.</p>
       </div>
-      <div class="services_service" (mouseenter)="setWebdesignActive()">
-        <div class="services_service-icon">
-          <div class="services_icon-background">
-            <fa-icon [icon]="faDisplay" [ngClass]="(activeServ === 'webdesign') ? 'services_icon active' : 'services_icon'"></fa-icon>
-          </div>
-        </div>
-        <div class="services_service-text-wrapper">
-          <div class="services_service-text">Webdesign</div>
-          <div class="services_service-text">4</div>
-        </div>
+      <div class="services_content-container two">
+        <p class="services_content-text">Dank deinen Vorstellungen personalisieren wir deine Webseite zu einem stilvollen Tab. Sei mit deiner zugeschnittenen Webseite immer ein Volltreffer in den Trends.
+        Wir heben deine Userexpierence auf eine neue Ebene. Deine Webseite wirkt einladender für Kundenaktionen.
+        Die Kundenresonanz wird dich überwältigen, ab jetzt öffnet jeder deinen Tab.</p>
       </div>
-      <div class="services_service" (mouseenter)="setSocialMediaActive()">
-        <div class="services_service-icon">
-          <div class="services_icon-background">
-            <fa-icon [icon]="faHashtag" [ngClass]="(activeServ === 'socialmedia') ? 'services_icon active' : 'services_icon'"></fa-icon>
-          </div>
-        </div>
-        <div class="services_service-text-wrapper">
-          <div class="services_service-text">Social Media</div>
-          <div class="services_service-text">4</div>
-        </div>
+      <div class="services_content-container three">
+        <p class="services_content-text">TabTeam wird für dich zum TagTeam. Durch personalisierte Tags setzten wir deinen Kanal ins Rampenlicht.
+        Anpassungen führen zu einer genaueren Zielgruppe. Social Media Konzepte machen dein Unternehmen zum Influencer.
+        Zielgruppenanalyse führt zu einer klar definierten Community. </p>
       </div>
     </div>
-    <p class="services_small-text">
-      Realisierte <span class="green">Ideen</span><br/>
-      mit erfolgreicher <span class="green">Kundenzufriedenheit</span>
-    </p>
   </div>
   <div class="services_section three">
     <div class="textContainer">
@@ -79,11 +30,11 @@
       <p>
         TabTeam arbeitet <span class="green uppercase">konsequent</span> und <span class="green uppercase">remote</span>.
       </p>
-    </div>
-    <div class="to-contact-container">
-      <div class="to-contact-button">Performance für deinen Tab
-        <div class="services_icon-background contact">
-          <fa-icon [icon]="faPaperPlane" class="services_icon contact"></fa-icon>
+      <div class="to-contact-container">
+        <div class="to-contact-button">Performance für deinen Tab
+          <div class="services_icon-background contact">
+            <fa-icon [icon]="faPaperPlane" class="services_icon contact"></fa-icon>
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-datenschutz',
@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../contents.component.scss']
 })
 export class DatenschutzComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
 }

@@ -12,7 +12,7 @@
 .nav_list {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem 1rem;
   margin: 0;
   box-sizing: border-box;
@@ -25,6 +25,7 @@
   display: flex;
   flex-direction: column-reverse;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .nav_icon {
@@ -47,6 +48,38 @@
   position: absolute;
   top: -1.5em;
   text-align: center;
+  &::before {
+    position: absolute;
+    bottom: -3px;
+    content: '';
+    width: 0;
+    height: 2px;
+    background: $accent-color;
+    transition-duration: $animation-speed;
+  }
+}
+
+.nav_icon-name.active {
+  position: absolute;
+  top: -1.5em;
+  text-align: center;
+  &::before {
+    position: absolute;
+    bottom: -3px;
+    content: '';
+    width: 80%;
+    height: 2px;
+    background: $accent-color;
+    border-radius: 50px;
+    transition-duration: $animation-speed;
+  }
+}
+
+.to-bottom {
+  position: fixed;
+  bottom: 3em;
+  right: 2em;
+  z-index: 2;
 }
 
 @media (min-width: 370px) {
@@ -60,7 +93,7 @@
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .navigation {
     width: auto;
     padding: 1em;
@@ -84,13 +117,26 @@
     }
   }
 
+  .nav_list-item {
+    display: flex;
+    flex-direction: row;
+  }
+
   .nav_icon {
     font-size: 1.8rem;
     width: 30px;
   }
 
-  .nav_icon-name {
+  .nav_icon-name,
+  .nav_icon-name.active {
     top: auto;
-    right: -2.5em;
+    position: relative;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav_icon {
+    font-size: 2.1rem;
+    height: 42px;
   }
 }

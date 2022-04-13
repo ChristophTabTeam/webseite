@@ -1,25 +1,29 @@
 <nav class="navigation">
   <ul class="nav_list">
-    <li class="nav_list-item">
-      <img src="../../../assets/img/icon.svg" class="nav_icon" *ngIf="activeSection === 'home'"/>
-      <img src="../../../assets/img/logo-lines.svg" class="nav_icon" *ngIf="activeSection !== 'home'"/>
-      <span class="nav_icon-name" *ngIf="activeSection === 'home'">Home</span>
+    <li class="nav_list-item noselect" (click)="scrollToSection(start)" (mouseenter)="hoverSection(sections.start)" (mouseleave)="unsetHoveredSection()">
+      <img src="../../../assets/img/logo-lines.svg" class="nav_icon" *ngIf="activeSection !== 'home'  && hoveredSection !== 'home'"/>
+      <img src="../../../assets/img/icon.svg" class="nav_icon" *ngIf="activeSection === 'home' || hoveredSection === 'home' "/>
+      <span [ngClass]="(activeSection === 'home') ? 'nav_icon-name active' : 'nav_icon-name' " *ngIf="activeSection === 'home'">Home</span>
+      <span class="nav_icon-name" *ngIf="hoveredSection === 'home' && activeSection !== 'home'">Home</span>
     </li>
-    <li class="nav_list-item">
-      <fa-icon [icon]="faLightbulb" class="nav_icon stroke"></fa-icon>
-      <span class="nav_icon-name" *ngIf="activeSection === 'service'">Service</span>
+    <li class="nav_list-item noselect" (click)="scrollToSection(service)" (mouseenter)="hoverSection(sections.service)" (mouseleave)="unsetHoveredSection()">
+      <fa-icon [icon]="faLightbulb" [ngClass]="(hoveredSection === 'service' || activeSection === 'service') ? 'nav_icon' : 'nav_icon stroke'"></fa-icon>
+      <span [ngClass]="(activeSection === 'service') ? 'nav_icon-name active' : 'nav_icon-name' " *ngIf="activeSection === 'service'">Service</span>
+      <span class="nav_icon-name" *ngIf="hoveredSection === 'service' && activeSection !== 'service'">Service</span>
     </li>
-    <li class="nav_list-item">
-      <fa-icon [icon]="faPeopleGroup" class="nav_icon stroke"></fa-icon>
-      <span class="nav_icon-name" *ngIf="activeSection === 'team'">Team</span>
+    <li class="nav_list-item noselect" (click)="scrollToSection(team)" (mouseenter)="hoverSection(sections.team)" (mouseleave)="unsetHoveredSection()">
+      <fa-icon [icon]="faPeopleGroup" [ngClass]="(hoveredSection === 'team' || activeSection === 'team') ? 'nav_icon' : 'nav_icon stroke'"></fa-icon>
+      <span [ngClass]="(activeSection === 'team') ? 'nav_icon-name active' : 'nav_icon-name' " *ngIf="activeSection === 'team'">Team</span>
+      <span class="nav_icon-name" *ngIf="hoveredSection === 'team' && activeSection !== 'team'">Team</span>
     </li>
-    <li class="nav_list-item">
-      <fa-icon [icon]="faPaperPlane" class="nav_icon stroke"></fa-icon>
-      <span class="nav_icon-name" *ngIf="activeSection === 'contact'">Kontakt</span>
+    <li class="nav_list-item noselect" (click)="scrollToSection(contact)" (mouseenter)="hoverSection(sections.contact)" (mouseleave)="unsetHoveredSection()">
+      <fa-icon [icon]="faPaperPlane" [ngClass]="(hoveredSection === 'contact' || activeSection === 'contact') ? 'nav_icon' : 'nav_icon stroke'"></fa-icon>
+      <span [ngClass]="(activeSection === 'contact') ? 'nav_icon-name active' : 'nav_icon-name' " *ngIf="activeSection === 'contact'">Kontakt</span>
+      <span class="nav_icon-name" *ngIf="hoveredSection === 'contact' && activeSection !== 'contact'">Kontakt</span>
     </li>
   </ul>
 </nav>
 
-<div class="to-bottom" *ngIf="width >= 900">
-  <fa-icon [icon]="faCircleInfo" class="nav_icon stroke"></fa-icon>
+<div class="to-bottom noselect" *ngIf="width >= 900" (click)="scrollToSection(footer)" (mouseenter)="hoverSection(sections.footer)" (mouseleave)="unsetHoveredSection()">
+  <fa-icon [icon]="faCircleInfo" [ngClass]="(hoveredSection === 'footer' || activeSection === 'footer') ? 'nav_icon' : 'nav_icon stroke'"></fa-icon>
 </div>

@@ -1,7 +1,8 @@
 import { jobs } from './../../../modules/Jobs';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { faArrowUpFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { FooterService } from 'src/app/services/footer.service';
 
 @Component({
   selector: 'app-bewerbung',
@@ -23,13 +24,18 @@ export class BewerbungComponent implements OnInit {
   jobs = jobs
   faArrowUpFromBracket = faArrowUpFromBracket
 
-  constructor() { }
+  applyedJob: string
+
+  constructor(private footerService: FooterService) { }
 
   ngOnInit(): void {
+    this.applyedJob = this.footerService.applyToJob
+    console.log(this.applyedJob)
   }
 
   onSubmit() {
 
   }
+
 
 }

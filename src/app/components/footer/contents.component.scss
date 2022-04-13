@@ -6,6 +6,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1em;
   box-sizing: border-box;
 }
@@ -28,6 +30,7 @@
   'one'
   'two'
   'three'
+  'four'
   ;
   gap: 1.5em;
   padding-top: 1.5em;
@@ -68,7 +71,6 @@
 
 .footer_app-file-name {
   display: grid;
-
 }
 
 .footer_app-input-file::-webkit-file-upload-button {
@@ -120,6 +122,109 @@
   box-shadow: $box-shadow;
 }
 
+li {
+  list-style: none;
+}
+
+.footer_content {
+  max-height: 100%;
+}
+
+.footer__content__headline {
+  font-size: 1.8em;
+  color: $accent-color;
+}
+
+.footer__content__chapter-headline {
+  font-size: 1.4em;
+  padding: 0.5em 0 0 0;
+  color: $accent-color;
+}
+
+.footer__content__text {
+  font-size: .8em;
+}
+
+.footer__content__ul {
+  padding: 0 0 0 2em;
+  color: $white-font-color;
+}
+
+.footer__content__li {
+  padding: 0.5em 0;
+  list-style: none;
+}
+
+.footer__content__sub-chapter-headline {
+  color: $white-font-color;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.footer__content__sub-sub-chapter-headline {
+  font-size: 1.3em;
+  color: $white-font-color;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.footer__content__text-mini {
+  font-size: 0.9em;
+}
+
+.media__content {
+  padding: 6em 9em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__media-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2em 0;
+}
+
+.footer__media-button {
+  width: 50%;
+  text-align: center;
+  background: linear-gradient(0.25turn, #204f31, #358150, #204f31);
+  border-radius: 25px;
+  font-size: 1.3em;
+}
+
+.jobs__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.job_container {
+  width: 100%;
+  backdrop-filter: brightness(110%);
+  height: max-content;
+  padding: 2em;
+  border-left: $accent-color 4px solid;
+  overflow: hidden;
+  transition-duration: $animation-speed;
+}
+
+.open_job-button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: $white-font-color;
+  font-size: 2em;
+  transition-duration: $animation-speed;
+}
+
+.open_job-button-icon.active {
+  transform: rotate(180deg);
+}
+
 @media (min-width: 370px) {
   .footer_form-first-grid {
     grid-template-areas:
@@ -128,5 +233,48 @@
     'five five'
     ;
     font-size: 1.4em;
+  }
+}
+
+@media (min-width: 600px) {
+  .footer_form-files-container {
+    grid-template-areas:
+    'one two'
+    'three three'
+    'four four'
+    ;
+  }
+  .footer_apply-button {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1350px) {
+  .footer_input,
+  .footer_select {
+  width: 100%;
+  padding: 0.5em 1em;
+  font-size: .7em;
+  }
+
+  .footer_apply-button {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1900px) {
+  .footer_form {
+    font-size: 1.5em;
+  }
+
+  .footer_input,
+  .footer_select {
+  width: 100%;
+  padding: 0.5em 1em;
+  font-size: .7em;
+  }
+
+  .footer_apply-button {
+    font-size: 1em;
   }
 }

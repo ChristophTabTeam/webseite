@@ -3,8 +3,10 @@
 </div>
 
 <div class="start_grid">
-  <div class="grid-section" *ngIf='width >= 900'></div>
-  <div class="grid-section">
+  <div [ngClass]="(width >= 1200) ? 'grid-section one' : 'grid-section'" *ngIf='width >= 1200'>
+    <img class="start_monitor" src="../../../../assets/img/monitor.png">
+  </div>
+  <div [ngClass]="(width >= 1200) ? 'grid-section two' : 'grid-section'">
     <div class="textContainer">
       <h1><span class="green">Deine</span> Ideen setzen</h1>
       <h2>wir uns als <span class="green">Maßstab</span></h2>

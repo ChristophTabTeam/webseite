@@ -1,4 +1,4 @@
-<footer class="footer">
+<div class="footer">
   <div class="footer_grid">
     <div class="footer_section one">
       <div class="footer_text-wrapper">
@@ -50,34 +50,12 @@
             <li [ngClass]="(activeContent === 'datenschutz') ? 'footer_menu-list-item active uppercase' : 'footer_menu-list-item uppercase'" (click)="setContent(contents.datenschutz)">Datenschutz</li>
           </ul>
         </div>
-        <div class="footer_menu-row">
-          <ul class='footer_menu-list'>
-            <li class='footer_menu-list-item'>
-                <span class='footer__list-item-name'>Geltungsbereich</span>
-            </li>
-            <li class='footer_menu-list-item'>
-                <span class='footer__list-item-name'>Vertragspartner</span>
-            </li>
-            <li class='footer_menu-list-item'>
-                <span class='footer__list-item-name'>Vertragsschluss</span>
-            </li>
-            <li class='footer_menu-list-item'>
-                <span class='footer__list-item-name'>Widerrufsrecht</span>
-            </li>
-            <li class='footer_menu-list-item'>
-                <span class='footer__list-item-name'>Preise und Versandkosten</span>
-            </li>
-            <li class='footer_menu-list-item'>
-                <span class='footer__list-item-name'>Lieferung</span>
-            </li>
-            <li class='footer_menu-list-item'>
-                <span class='footer__list-item-name'>Zahlung</span>
-            </li>
-            <li class='footer_menu-list-item'>
-                <span class='footer__list-item-name'>Eigentumsvorbehalt</span>
-            </li>
-            <li class='footer_menu-list-item'>
-                <span class='footer__list-item-name'>Streitbeteiligung</span>
+        <div class="footer_menu-row chapters">
+          <ul class='footer_menu-list' *ngIf="activeContent === 'datenschutz'">
+            <li class='footer_menu-list-item' *ngFor="let chapter of privacyChapters">
+              <a href={{chapter.ref}} class="footer-a">
+                <span class='footer_list-item-name'>{{chapter.name}}</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -85,13 +63,32 @@
     </div>
     <div class="footer_section two">
       <div class="footer_content-container">
-        <app-agb *ngIf="activeContent === 'agb'"></app-agb>
-        <app-jobs *ngIf="activeContent === 'jobs'"></app-jobs>
-        <app-media *ngIf="activeContent === 'media'"></app-media>
-        <app-bewerbung *ngIf="activeContent === 'bewerbung'"></app-bewerbung>
-        <app-impressum *ngIf="activeContent === 'impressum'"></app-impressum>
-        <app-datenschutz *ngIf="activeContent === 'datenschutz'"></app-datenschutz>
+        <app-agb
+          *ngIf="activeContent === 'agb'"
+          #agbRef
+        ></app-agb>
+        <app-jobs
+          *ngIf="activeContent === 'jobs'"
+          (setContentToApply)="setContentToApply()"
+          #jobsRef
+        ></app-jobs>
+        <app-media
+          *ngIf="activeContent === 'media'"
+          #mediaRef
+        ></app-media>
+        <app-bewerbung
+          *ngIf="activeContent === 'bewerbung'"
+          #bewerbungRef
+        ></app-bewerbung>
+        <app-impressum
+          *ngIf="activeContent === 'impressum'"
+          #impressumRef
+        ></app-impressum>
+        <app-datenschutz
+          *ngIf="activeContent === 'datenschutz'"
+          #datenschutzRef
+        ></app-datenschutz>
       </div>
     </div>
   </div>
-</footer>
+</div>

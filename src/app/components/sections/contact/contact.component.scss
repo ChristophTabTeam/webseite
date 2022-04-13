@@ -240,3 +240,19 @@ input:focus, textarea:focus {
     font-size: .85em;
   }
 }
+
+@media (min-width: 600px) {
+  .contact_grid {
+    font-size: .95em;
+  }
+
+
+}
+
+@media (min-width: 900px) {
+  .contact_grid {
+    grid-template-areas:
+    'one two'
+    ;
+  }
+}
