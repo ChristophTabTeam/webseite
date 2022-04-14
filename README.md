@@ -1,27 +1,39 @@
-# Website
+# Informationen zur TabTeam Webseite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+dies ist das Repository von der TabTeam Webseite
 
-## Development server
+## Start des Development Prozesses
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+um auf eine funktionierende development Webseite zu kommen führe im Haupt-Directory den Befehlt
 
-## Code scaffolding
+### `npm run build`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+aus. Hierbei wird von dem React-Front-End eine productionready Version erstellt und alle für das Front-End benötigten npm packages installiert.
+Sobald das erledigt ist führe zunächst den Befehlt
 
-## Build
+### `npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+aus um die benötigten npm packages für den Server zu installieren. Wenn das erledigt ist, führe den Befehl
 
-## Running unit tests
+### `npm run server`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+aus. Hier wird der Development Server unter http://localhost:3001 gestartet und man kann das Backend der Webseite bearbeiten.
+Die Information aus der `config.js` Datei findest du in der E-Mail. Du musst die Datei selber im Haupt-Directory anlegen.
 
-## Running end-to-end tests
+## Änderungen am Front-End
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+solltest du am Front-End Änderungen vornehmen wollen, musst du diese im "src" Ordner im "client" Directory und in den `index.js` Dateien machen. Wenn du die Änderungen auf der Webseite unter localhost sehen willst musst du den bereits erstellten "build" Ordner löschen und im Terminal 
 
-## Further help
+### `cd client` 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+und anschließend den Befehl 
+
+### `npm run build`
+
+ausführen.
+Beachte, wenn du den build-Befehl im "client" Directory ausführst dass dann nur die Build Version erstellt wird und die npm packages nicht mitinstalliert werden. 
+Wenn du die npm packages aus dem "client" Directory installieren möchstes, musst du dort 
+
+### `npm install`
+
+ausführen oder du gehst ein paar Schritte zurück zum Punkt "Start des Development Prozesses"

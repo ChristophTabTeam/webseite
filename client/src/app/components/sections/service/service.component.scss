@@ -91,6 +91,8 @@
   font-size: 0.9em;
   gap: 1em;
   padding: 1em;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .services_content-container {
@@ -174,6 +176,7 @@
 }
 
 .to-contact-button {
+  cursor: pointer;
   width: 90%;
   background: $gradient;
   position: relative;

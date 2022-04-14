@@ -61,6 +61,10 @@
   max-height: 165px;
 }
 
+.left-column {
+  width: min-content;
+}
+
 .footer_menu-list-item {
   list-style: none;
   position: relative;
@@ -79,7 +83,6 @@
 
 .footer_menu-list-item.active {
   position: relative;
-  width: min-content;
   &::before {
     position: absolute;
     bottom: -3px;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { faDisplay, faFireFlameCurved, faHashtag, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
@@ -15,6 +15,8 @@ export class ServiceComponent implements OnInit {
   width: number
   height: number
   activeServ: string = 'branding'
+
+  @Input() contact: HTMLElement
 
   constructor() { }
 
@@ -33,5 +35,9 @@ export class ServiceComponent implements OnInit {
 
   setSocialMediaActive() {
     this.activeServ = 'socialmedia'
+  }
+
+  toContact($element: any): void {
+    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
   }
 }

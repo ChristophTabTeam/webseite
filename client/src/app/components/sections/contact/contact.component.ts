@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { faPaperPlane, faUser, faEnvelope, faComment } from '@fortawesome/free-solid-svg-icons';
 

@@ -17,7 +17,7 @@
   background: url(../../../../assets/img/Background-Website_Blur.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 300%;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,5 +254,49 @@ input:focus, textarea:focus {
     grid-template-areas:
     'one two'
     ;
+  }
+}
+
+@media (min-width: 1350px) {
+  .contact_grid {
+    grid-template-areas:
+    'one two'
+    'three two'
+    ;
+    grid-template-rows: [linename1] 60%;
+    grid-auto-columns: 1fr;
+    grid-template-columns: [linename1] 65%;
+  }
+
+  .contact_section.one {
+    position: relative;
+    &::before {
+      position: absolute;
+      width: 0;
+      height: 0;
+      content: '';
+      border-top: 15em solid $background-color;
+      border-left: 17em solid transparent;
+      right: 0;
+      top: 0;
+    }
+    &::after {
+      position: absolute;
+      width: 0;
+      height: 0;
+      content: '';
+      border-bottom: 15em solid $background-color;
+      border-left: 17em solid transparent;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .contact_section.two {
+    justify-content: flex-start;
+  }
+
+  .contact__iphone {
+    max-height: 800px;
   }
 }
