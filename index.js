@@ -86,22 +86,15 @@ app.post('/application', (req, res) => {
                 status: 'fail'
             })
         } else {
-            res.json({
-                status: 'success'
-            })
+            res.redirect('/')
         }
     })
-
 })
 
 app.use(express.static(path.resolve(__dirname, './client/build')))
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
-})
-
-app.get('/send', (req,res) => {
-    res.sendFile(path.resolve(__dirname, '.client/build', 'index.html'))
 })
 
 const PORT = process.env.PORT || 3001

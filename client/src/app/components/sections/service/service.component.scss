@@ -13,7 +13,7 @@
 
 .services_section.one {
   grid-area: one;
-  background: url(../../../../assets/img/Background-Website_Blur.jpg);
+  background: $background-color;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -98,15 +98,34 @@
 .services_content-container {
   font-size: 0.85rem;
   text-align: left;
-  padding: 1em;
-  border: 1.3pt $white-font-color solid;
   border-radius: 7px;
+  display: flex;
+  flex-direction: column;
 }
 
 .services_content-text {
+  padding: 1em;
   margin: 0;
-  text-align: justify;
+  text-align: left;
   line-height: 1.5em;
+  border: 1.3pt $white-font-color solid;
+}
+
+.definition {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.definition-number {
+  width: min-content;
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.definition-text {
+  margin: 0;
+  font-size: 1.3em;
 }
 
 .services_choose-container {

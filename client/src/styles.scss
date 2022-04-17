@@ -34,6 +34,10 @@ h2 {
   margin: 0;
 }
 
+p {
+  font-size: 0.8em;
+}
+
 section {
   height: 100vh;
   position: relative;
@@ -56,6 +60,10 @@ section {
 
 .italic {
   font-style: italic;
+}
+
+.bold {
+  font-weight: 600;
 }
 
 .one {

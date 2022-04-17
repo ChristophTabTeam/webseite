@@ -26,9 +26,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
   display: flex;
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .footer_menu-list {
@@ -104,11 +104,11 @@
 }
 
 .footer_content-container {
-  padding: 3em;
+  padding: 2em;
   box-sizing: border-box;
-  height: calc(100vh - 72px);
   overflow-y: auto;
   width: 100%;
+  height: 90vh;
 }
 
 .footer-a {

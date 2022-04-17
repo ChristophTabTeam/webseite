@@ -23,7 +23,7 @@ export class NavigationComponent implements OnInit {
 
   width: number
   height: number
-  activeSection: string = 'home'
+  activeSection: string
   hoveredSection: string
 
   @Input() start: HTMLElement
